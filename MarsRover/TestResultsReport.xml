@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestResults Name="MarsRover" TotalCount="119" PassedCount="119" FailedCount="0" IgnoredCount="0" Date="2022-05-27" Time="11:29">
+  <TestSuite Name="MarsRover.Tests">
+    <TestSuite Name="MarsRover.Tests.IntegrationTests">
+      <TestSuite Name="RoverControllerTests">
+        <TestCase Name="ExecuteCommands_WithInvalidCommands_ThrowsException(&quot;0,0,North&quot;, &quot; &quot;)" State="Passed" Duration="0.000176" />
+        <TestCase Name="ExecuteCommands_WithInvalidCommands_ThrowsException(&quot;0,0,North&quot;, &quot;&quot;)" State="Passed" Duration="0.000185" />
+        <TestCase Name="ExecuteCommands_WithInvalidCommands_ThrowsException(&quot;0,0,North&quot;, &quot;41421&quot;)" State="Passed" Duration="0.000182" />
+        <TestCase Name="ExecuteCommands_WithInvalidCommands_ThrowsException(&quot;0,0,North&quot;, &quot;LFBRRRB1&quot;)" State="Passed" Duration="0.000224" />
+        <TestCase Name="ExecuteCommands_WithInvalidCommands_ThrowsException(&quot;0,0,North&quot;, &quot;LOL&quot;)" State="Passed" Duration="0.064864" />
+        <TestCase Name="ExecuteCommands_WithInvalidCommands_ThrowsException(&quot;0,0,North&quot;, &quot;O&quot;)" State="Passed" Duration="0.000773" />
+        <TestCase Name="ExecuteCommands_WithInvalidCommands_ThrowsException(&quot;0,0,North&quot;, null)" State="Passed" Duration="0.000171" />
+        <TestCase Name="ExecuteCommands_WithInvalidCoordinates_ThrowsException(&quot; &quot;, System.ArgumentNullException)" State="Passed" Duration="0.000464" />
+        <TestCase Name="ExecuteCommands_WithInvalidCoordinates_ThrowsException(&quot;&quot;, System.ArgumentNullException)" State="Passed" Duration="0.000166" />
+        <TestCase Name="ExecuteCommands_WithInvalidCoordinates_ThrowsException(&quot;-4,-4&quot;, System.ArgumentException)" State="Passed" Duration="0.000112" />
+        <TestCase Name="ExecuteCommands_WithInvalidCoordinates_ThrowsException(&quot;0,1.1,North&quot;, System.ArgumentException)" State="Passed" Duration="0.000404" />
+        <TestCase Name="ExecuteCommands_WithInvalidCoordinates_ThrowsException(&quot;2,East&quot;, System.ArgumentException)" State="Passed" Duration="0.00327" />
+        <TestCase Name="ExecuteCommands_WithInvalidCoordinates_ThrowsException(&quot;ABCdef&quot;, System.ArgumentException)" State="Passed" Duration="0.000135" />
+        <TestCase Name="ExecuteCommands_WithInvalidCoordinates_ThrowsException(&quot;North&quot;, System.ArgumentException)" State="Passed" Duration="9.89E-05" />
+        <TestCase Name="ExecuteCommands_WithInvalidCoordinates_ThrowsException(null, System.ArgumentNullException)" State="Passed" Duration="0.000302" />
+        <TestCase Name="ExecuteCommands_WithValidCoordinates_ReturnsNewPosition(&quot;-4 , -4 , south&quot;, &quot; BBBBLFFFF &quot;, 0, 0, East)" State="Passed" Duration="9.1E-05" />
+        <TestCase Name="ExecuteCommands_WithValidCoordinates_ReturnsNewPosition(&quot;-4,-4,south&quot;, &quot;BBBBLFFFF&quot;, 0, 0, East)" State="Passed" Duration="9.3E-05" />
+        <TestCase Name="ExecuteCommands_WithValidCoordinates_ReturnsNewPosition(&quot;0,0,North&quot;, &quot;LLLL&quot;, 0, 0, North)" State="Passed" Duration="0.000243" />
+        <TestCase Name="ExecuteCommands_WithValidCoordinates_ReturnsNewPosition(&quot;4,2,EAST&quot;, &quot;FLFFFRFLB&quot;, 6, 4, North)" State="Passed" Duration="0.039803" />
+      </TestSuite>
+    </TestSuite>
+    <TestSuite Name="MarsRover.Tests.UnitTests.Domain">
+      <TestSuite Name="CoordinatesTests">
+        <TestCase Name="Coordinates_IsNorthSouthLine_ReturnsTrueIfIsNorthOrSouthDirection(East, False)" State="Passed" Duration="0.000549" />
+        <TestCase Name="Coordinates_IsNorthSouthLine_ReturnsTrueIfIsNorthOrSouthDirection(North, True)" State="Passed" Duration="0.154967" />
+        <TestCase Name="Coordinates_IsNorthSouthLine_ReturnsTrueIfIsNorthOrSouthDirection(South, True)" State="Passed" Duration="0.000416" />
+        <TestCase Name="Coordinates_IsNorthSouthLine_ReturnsTrueIfIsNorthOrSouthDirection(West, False)" State="Passed" Duration="0.001656" />
+        <TestCase Name="Coordinates_ToString_ReturnsFormattedString" State="Passed" Duration="0.002016" />
+        <TestCase Name="Coordinates_WhenCloned_ReturnsNewInstanceWithTheSameValues" State="Passed" Duration="0.008166" />
+        <TestCase Name="Coordinates_WhenEqualsToOther_ReturnsTrue" State="Passed" Duration="0.005004" />
+        <TestCase Name="Coordinates_WhenInitialized_ByData_AllPropertiesAreInitializedProperly" State="Passed" Duration="0.004355" />
+        <TestCase Name="Coordinates_WhenInitialized_ByEmptyString_ThrowsException" State="Passed" Duration="0.003947" />
+        <TestCase Name="Coordinates_WhenInitialized_ByInvalidString_ThrowsException(&quot;0.4,7,ABCDE&quot;)" State="Passed" Duration="0.000154" />
+        <TestCase Name="Coordinates_WhenInitialized_ByInvalidString_ThrowsException(&quot;4&quot;)" State="Passed" Duration="0.000123" />
+        <TestCase Name="Coordinates_WhenInitialized_ByInvalidString_ThrowsException(&quot;4,0.7,ABCDE&quot;)" State="Passed" Duration="0.000113" />
+        <TestCase Name="Coordinates_WhenInitialized_ByInvalidString_ThrowsException(&quot;4,6&quot;)" State="Passed" Duration="0.000116" />
+        <TestCase Name="Coordinates_WhenInitialized_ByInvalidString_ThrowsException(&quot;4,7,ABCDE&quot;)" State="Passed" Duration="0.003523" />
+        <TestCase Name="Coordinates_WhenInitialized_ByInvalidString_ThrowsException(&quot;4,North&quot;)" State="Passed" Duration="0.000124" />
+        <TestCase Name="Coordinates_WhenInitialized_ByInvalidString_ThrowsException(&quot;4,Y,ABCDE&quot;)" State="Passed" Duration="0.000124" />
+        <TestCase Name="Coordinates_WhenInitialized_ByInvalidString_ThrowsException(&quot;ABCDE@542&quot;)" State="Passed" Duration="0.000124" />
+        <TestCase Name="Coordinates_WhenInitialized_ByInvalidString_ThrowsException(&quot;X,7,ABCDE&quot;)" State="Passed" Duration="0.000117" />
+        <TestCase Name="Coordinates_WhenInitialized_ByNull_ThrowsException" State="Passed" Duration="0.0056039" />
+        <TestCase Name="Coordinates_WhenInitialized_ByString_AllPropertiesAreInitializedProperly(&quot;-2,0,EaSt&quot;, -2, 0, East)" State="Passed" Duration="5.4E-05" />
+        <TestCase Name="Coordinates_WhenInitialized_ByString_AllPropertiesAreInitializedProperly(&quot;-4,7,West&quot;, -4, 7, West)" State="Passed" Duration="5.7E-05" />
+        <TestCase Name="Coordinates_WhenInitialized_ByString_AllPropertiesAreInitializedProperly(&quot;0,-1,East&quot;, 0, -1, East)" State="Passed" Duration="4.6E-05" />
+        <TestCase Name="Coordinates_WhenInitialized_ByString_AllPropertiesAreInitializedProperly(&quot;12,5,WEST&quot;, 12, 5, West)" State="Passed" Duration="4.5E-05" />
+        <TestCase Name="Coordinates_WhenInitialized_ByString_AllPropertiesAreInitializedProperly(&quot;4,0,South&quot;, 4, 0, South)" State="Passed" Duration="4.4E-05" />
+        <TestCase Name="Coordinates_WhenInitialized_ByString_AllPropertiesAreInitializedProperly(&quot;4,7,North&quot;, 4, 7, North)" State="Passed" Duration="0.001291" />
+        <TestCase Name="Coordinates_WhenInitialized_ByString_AllPropertiesAreInitializedProperly(&quot;8,0,south&quot;, 8, 0, South)" State="Passed" Duration="4.2E-05" />
+        <TestCase Name="Coordinates_WhenNull_ReturnsFalse" State="Passed" Duration="0.002469" />
+        <TestCase Name="Coordinates_WhenUpdatesDirection_ThenNewDirectionSet(East)" State="Passed" Duration="0.000479" />
+        <TestCase Name="Coordinates_WhenUpdatesDirection_ThenNewDirectionSet(North)" State="Passed" Duration="0.003044" />
+        <TestCase Name="Coordinates_WhenUpdatesDirection_ThenNewDirectionSet(South)" State="Passed" Duration="0.000439" />
+        <TestCase Name="Coordinates_WhenUpdatesDirection_ThenNewDirectionSet(West)" State="Passed" Duration="0.000452" />
+        <TestCase Name="Coordinates_WhenUpdates_ThenXAndYPropertiesUpdated(-10, 0)" State="Passed" Duration="0.000459" />
+        <TestCase Name="Coordinates_WhenUpdates_ThenXAndYPropertiesUpdated(-10, 10)" State="Passed" Duration="0.000505" />
+        <TestCase Name="Coordinates_WhenUpdates_ThenXAndYPropertiesUpdated(0, -10)" State="Passed" Duration="0.000582" />
+        <TestCase Name="Coordinates_WhenUpdates_ThenXAndYPropertiesUpdated(0, 0)" State="Passed" Duration="0.0004929" />
+        <TestCase Name="Coordinates_WhenUpdates_ThenXAndYPropertiesUpdated(0, 10)" State="Passed" Duration="0.000417" />
+        <TestCase Name="Coordinates_WhenUpdates_ThenXAndYPropertiesUpdated(10, -10)" State="Passed" Duration="0.00045" />
+        <TestCase Name="Coordinates_WhenUpdates_ThenXAndYPropertiesUpdated(10, 0)" State="Passed" Duration="0.002113" />
+      </TestSuite>
+      <TestSuite Name="RoverActionsTests">
+        <TestCase Name="MoveAction_WhenEqualsToOther_ReturnsTrue(Backward)" State="Passed" Duration="5.1E-05" />
+        <TestCase Name="MoveAction_WhenEqualsToOther_ReturnsTrue(Forward)" State="Passed" Duration="0.015476" />
+        <TestCase Name="MoveAction_WhenInitialized_IsInitializedProperly(Backward)" State="Passed" Duration="8.4E-05" />
+        <TestCase Name="MoveAction_WhenInitialized_IsInitializedProperly(Forward)" State="Passed" Duration="0.002563" />
+        <TestCase Name="MoveAction_WhenNotEqualToOther_ReturnsFalse" State="Passed" Duration="0.001596" />
+        <TestCase Name="MoveAction_WhenNull_ReturnsFalse" State="Passed" Duration="0.001426" />
+        <TestCase Name="RotateAction_WhenEqualsToOther_ReturnsTrue(Left)" State="Passed" Duration="0.002702" />
+        <TestCase Name="RotateAction_WhenEqualsToOther_ReturnsTrue(Right)" State="Passed" Duration="4E-05" />
+        <TestCase Name="RotateAction_WhenInitialized_IsInitializedProperly(Left)" State="Passed" Duration="0.005933" />
+        <TestCase Name="RotateAction_WhenInitialized_IsInitializedProperly(Right)" State="Passed" Duration="0.000257" />
+        <TestCase Name="RotateAction_WhenNotEqualToOther_ReturnsFalse" State="Passed" Duration="0.001466" />
+        <TestCase Name="RotateAction_WhenNull_ReturnsFalse" State="Passed" Duration="0.001544" />
+      </TestSuite>
+      <TestSuite Name="RoverTests">
+        <TestCase Name="Rover_RotateLeft_UpdatesCoordinationsProperly(East, Left, North)" State="Passed" Duration="0.000908" />
+        <TestCase Name="Rover_RotateLeft_UpdatesCoordinationsProperly(North, Left, West)" State="Passed" Duration="0.006946" />
+        <TestCase Name="Rover_RotateLeft_UpdatesCoordinationsProperly(South, Left, East)" State="Passed" Duration="0.000923" />
+        <TestCase Name="Rover_RotateLeft_UpdatesCoordinationsProperly(West, Left, South)" State="Passed" Duration="0.000944" />
+        <TestCase Name="Rover_RotateRight_UpdatesCoordinationsProperly(East, Right, South)" State="Passed" Duration="0.001489" />
+        <TestCase Name="Rover_RotateRight_UpdatesCoordinationsProperly(North, Right, East)" State="Passed" Duration="0.002684" />
+        <TestCase Name="Rover_RotateRight_UpdatesCoordinationsProperly(South, Right, West)" State="Passed" Duration="0.000781" />
+        <TestCase Name="Rover_RotateRight_UpdatesCoordinationsProperly(West, Right, North)" State="Passed" Duration="0.000769" />
+        <TestCase Name="Rover_WhenDirectionIsEastWest_WhenMovedManySteps_UpdatesCoordinatesProperly(East, Backward, -1)" State="Passed" Duration="0.001033" />
+        <TestCase Name="Rover_WhenDirectionIsEastWest_WhenMovedManySteps_UpdatesCoordinatesProperly(East, Forward, 1)" State="Passed" Duration="0.014051" />
+        <TestCase Name="Rover_WhenDirectionIsEastWest_WhenMovedManySteps_UpdatesCoordinatesProperly(West, Backward, 1)" State="Passed" Duration="0.000963" />
+        <TestCase Name="Rover_WhenDirectionIsEastWest_WhenMovedManySteps_UpdatesCoordinatesProperly(West, Forward, -1)" State="Passed" Duration="0.000929" />
+        <TestCase Name="Rover_WhenDirectionIsEastWest_WhenMovedOneStep_UpdatesCoordinatesProperly(East, Backward, -1)" State="Passed" Duration="0.000767" />
+        <TestCase Name="Rover_WhenDirectionIsEastWest_WhenMovedOneStep_UpdatesCoordinatesProperly(East, Forward, 1)" State="Passed" Duration="0.002306" />
+        <TestCase Name="Rover_WhenDirectionIsEastWest_WhenMovedOneStep_UpdatesCoordinatesProperly(West, Backward, 1)" State="Passed" Duration="0.000763" />
+        <TestCase Name="Rover_WhenDirectionIsEastWest_WhenMovedOneStep_UpdatesCoordinatesProperly(West, Forward, -1)" State="Passed" Duration="0.000738" />
+        <TestCase Name="Rover_WhenDirectionIsNorthSouth_WhenMovedManySteps_UpdatesCoordinatesProperly(North, Backward, -1)" State="Passed" Duration="0.001275" />
+        <TestCase Name="Rover_WhenDirectionIsNorthSouth_WhenMovedManySteps_UpdatesCoordinatesProperly(North, Forward, 1)" State="Passed" Duration="0.006997" />
+        <TestCase Name="Rover_WhenDirectionIsNorthSouth_WhenMovedManySteps_UpdatesCoordinatesProperly(South, Backward, 1)" State="Passed" Duration="0.000731" />
+        <TestCase Name="Rover_WhenDirectionIsNorthSouth_WhenMovedManySteps_UpdatesCoordinatesProperly(South, Forward, -1)" State="Passed" Duration="0.000739" />
+        <TestCase Name="Rover_WhenDirectionIsNorthSouth_WhenMovedOneStep_UpdatesCoordinatesProperly(North, Backward, -1)" State="Passed" Duration="0.000454" />
+        <TestCase Name="Rover_WhenDirectionIsNorthSouth_WhenMovedOneStep_UpdatesCoordinatesProperly(North, Forward, 1)" State="Passed" Duration="0.00195" />
+        <TestCase Name="Rover_WhenDirectionIsNorthSouth_WhenMovedOneStep_UpdatesCoordinatesProperly(South, Backward, 1)" State="Passed" Duration="0.000389" />
+        <TestCase Name="Rover_WhenDirectionIsNorthSouth_WhenMovedOneStep_UpdatesCoordinatesProperly(South, Forward, -1)" State="Passed" Duration="0.000397" />
+        <TestCase Name="Rover_WhenEmptyAction_ThrowsException" State="Passed" Duration="0.004294" />
+        <TestCase Name="Rover_WhenInitialized_StartAndCurrentPositionAreEqual" State="Passed" Duration="0.003913" />
+        <TestCase Name="Rover_WhenInitialized_WithoutStartPosition_IsInitializedByDefaultValues" State="Passed" Duration="0.002303" />
+        <TestCase Name="Rover_WhenInitialized_WithStartPosition_IsInitializedProperly" State="Passed" Duration="0.002797" />
+      </TestSuite>
+    </TestSuite>
+    <TestSuite Name="MarsRover.Tests.UnitTests.Extensions">
+      <TestSuite Name="IntExtensionsTests">
+        <TestCase Name="Modulo_CalculatesProperValue(-1, 3, 2)" State="Passed" Duration="3.4E-05" />
+        <TestCase Name="Modulo_CalculatesProperValue(-5, 3, 1)" State="Passed" Duration="2E-05" />
+        <TestCase Name="Modulo_CalculatesProperValue(0, 7, 0)" State="Passed" Duration="3E-05" />
+        <TestCase Name="Modulo_CalculatesProperValue(1, 3, 1)" State="Passed" Duration="0.001426" />
+        <TestCase Name="Modulo_CalculatesProperValue(4, 3, 1)" State="Passed" Duration="3.9E-05" />
+        <TestCase Name="Modulo_CalculatesProperValue(6, 3, 0)" State="Passed" Duration="3.7E-05" />
+      </TestSuite>
+    </TestSuite>
+    <TestSuite Name="MarsRover.Tests.UnitTests.Services">
+      <TestSuite Name="CommandTransformerTests">
+        <TestCase Name="TransformCommand_WhenCommandIsEmpty_ReturnsEmptyQueue(&quot; &quot;)" State="Passed" Duration="0.000145" />
+        <TestCase Name="TransformCommand_WhenCommandIsEmpty_ReturnsEmptyQueue(&quot;&quot;)" State="Passed" Duration="0.004647" />
+        <TestCase Name="TransformCommand_WhenCommandIsEmpty_ReturnsEmptyQueue(null)" State="Passed" Duration="0.000111" />
+        <TestCase Name="TransformCommand_WhenMoveCommandValid_ReturnsMoveAction(&quot;B&quot;, Backward)" State="Passed" Duration="0.001961" />
+        <TestCase Name="TransformCommand_WhenMoveCommandValid_ReturnsMoveAction(&quot;F&quot;, Forward)" State="Passed" Duration="0.000107" />
+        <TestCase Name="TransformCommand_WhenRotateCommandValid_ReturnsRotateAction(&quot;L&quot;, Left)" State="Passed" Duration="0.001787" />
+        <TestCase Name="TransformCommand_WhenRotateCommandValid_ReturnsRotateAction(&quot;R&quot;, Right)" State="Passed" Duration="0.000115" />
+      </TestSuite>
+      <TestSuite Name="CommandValidatorTests">
+        <TestCase Name="ValidateCommand_WhenCommandInvalidAndValid_ReturnsFalse(&quot;ABC&quot;, False)" State="Passed" Duration="0.001253" />
+        <TestCase Name="ValidateCommand_WhenCommandInvalidAndValid_ReturnsFalse(&quot;BBF&quot;, True)" State="Passed" Duration="7.7E-05" />
+        <TestCase Name="ValidateCommand_WhenCommandInvalidAndValid_ReturnsFalse(&quot;RRFLB&quot;, True)" State="Passed" Duration="5.9E-05" />
+        <TestCase Name="ValidateCommand_WhenCommandInvalidAndValid_ReturnsFalse(&quot;RRFZSLB&quot;, False)" State="Passed" Duration="5.9E-05" />
+        <TestCase Name="ValidateCommand_WhenCommandInvalid_ReturnsFalse" State="Passed" Duration="0.014942" />
+        <TestCase Name="ValidateCommand_WhenCommandIsNullOrEmpty_ReturnsFalse(&quot; &quot;)" State="Passed" Duration="6.4E-05" />
+        <TestCase Name="ValidateCommand_WhenCommandIsNullOrEmpty_ReturnsFalse(&quot;&quot;)" State="Passed" Duration="0.001108" />
+        <TestCase Name="ValidateCommand_WhenCommandIsNullOrEmpty_ReturnsFalse(null)" State="Passed" Duration="2.9E-05" />
+        <TestCase Name="ValidateCommand_WhenCommandValid_ReturnsTrue" State="Passed" Duration="0.006978" />
+      </TestSuite>
+    </TestSuite>
+  </TestSuite>
+</TestResults>
